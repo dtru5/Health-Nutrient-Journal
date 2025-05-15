@@ -1,5 +1,5 @@
-🥗 Food & Nutrient Journal
-Overview
+# 🥗 Food & Nutrient Journal
+## Overview
 
 This project is an in-progress Python-based application designed to help users track their daily food intake and compare their nutrient consumption against recommended dietary guidelines. By leveraging the USDA FoodData Central API, the app retrieves nutritional data (calories, macronutrients, micronutrients) for both branded and foundation food items.
 
@@ -16,10 +16,10 @@ Users can log their meals into a daily journal, and over time, gain insights int
 
     📈 Compare daily intake with standard dietary recommendations (planned)
 
-📂 Project Structure
-Code: main.py
+## 📂 Project Structure
+### Code: main.py
 
-Core Python script to:
+## Core Python script to:
 
     Take user input for food search
 
@@ -29,7 +29,7 @@ Core Python script to:
 
     Prompt user to add the food item to their journal (database integration planned)
     
-🧪 Getting Started
+## 🧪 Getting Started
 
     Clone the repository
 
@@ -39,9 +39,9 @@ Core Python script to:
 
     Run the main script:
 
-python main.py
+> python main.py
 
-🛠 Future Enhancements
+## 🛠 Future Enhancements
 
     Integrate food logging directly into a database
 
