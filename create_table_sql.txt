@@ -1,0 +1,27 @@
+CREATE TABLE Users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    phone VARCHAR(15),
+    email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE FoodDiary (
+    entry_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    food_id INT, -- Foreign key referencing FoodItems
+    amount_grams FLOAT,
+    entry_date DATE,
+    entry_time TIME,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (food_id) REFERENCES FoodItems(food_id)
+);
+
+CREATE TABLE FoodItems (
+    food_id INT PRIMARY KEY AUTO_INCREMENT,
+    food_name VARCHAR(100),
+    calories_per_100g FLOAT,
+    protein_per_100g FLOAT,
+    carbs_per_100g FLOAT,
+    fat_per_100g FLOAT
+);

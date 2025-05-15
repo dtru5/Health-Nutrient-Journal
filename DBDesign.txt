@@ -1,0 +1,34 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+
+Table User {
+  user_id integer [primary key]
+  first_name varchar
+  last_name varchar
+  phone_number varchar
+  email varchar
+}
+
+Table FoodDiary {
+  entry_id integer [primary key]
+  user_id integer 
+  food_id integer
+  amount_grams float
+  entry_date date
+  entry_time time
+}
+
+Table FoodItem {
+  food_id integer [primary key]
+  food_name varchar
+  calories_per_100g float
+  fat_per_100g float
+  carbs_per_100g float
+  protein_per_100g float
+}
+
+
+Ref: User.user_id < FoodDiary.user_id
+
+Ref: FoodDiary.food_id > FoodItem.food_id
